@@ -1,0 +1,132 @@
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto; /* Adds margin for spacing on smaller screens */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.question-section {
+  margin-bottom: 20px;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+}
+
+.options-list li {
+  background: #e7e7e7;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options-list li:hover {
+  background-color: rgb(173, 76, 222);
+}
+
+.options-list li.selected {
+  background-color: rgb(173, 76, 222);
+  color: white;
+}
+
+.pagination-controls {
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(173, 76, 222);
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover State */
+.pagination-controls button:hover {
+  background-color: linear-gradient(135deg, #6a11cb, #e325fc);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Focus State */
+.pagination-controls button:focus {
+  outline: none;
+  background-color: linear-gradient(135deg, #6a11cb, #e325fc); /* Glow effect around the button */
+}
+
+/* Active State (When the button is clicked) */
+button:active {
+  transform: translateY(1px); /* Slight push-down effect */
+  background-color: linear-gradient(135deg, #6a11cb, #e325fc);
+}
+
+/* Disabled State */
+.pagination-controls button:disabled {
+  background-color: linear-gradient(135deg, #6a11cb, #e325fc);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.scoreboard {
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .quiz-container {
+    max-width: 80%; /* Adjusts the width for tablets and smaller screens */
+    padding: 15px;
+  }
+
+  .pagination-controls button {
+    padding: 8px 12px; /* Slightly smaller buttons for mobile */
+    margin: 5px;
+    background-color: linear-gradient(135deg, #6a11cb, #e325fc);
+  }
+
+  .options-list li {
+    padding: 8px; /* Reduce padding for options on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    max-width: 80%; /* Almost full width for mobile phones */
+    padding: 10px;
+  }
+
+  .pagination-controls button {
+    padding: 10px 10px;
+    margin: 5px;
+    background-color: #e325fc;
+    /* background-color: linear-gradient(135deg, #6a11cb, #e325fc); */
+  }
+
+  .options-list li {
+    padding: 6px;
+    font-size: 14px; /* Adjust font size for better readability on small screens */
+  }
+
+  .pagination-controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pagination-controls button {
+    margin: 10px auto; /* Center buttons for mobile */
+    width: 80%;
+    background-color: linear-gradient(135deg, #6a11cb, #e325fc); /* Full width buttons for mobile */
+  }
+}
+
+

@@ -1,0 +1,167 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* Container for the entire quiz */
+.quiz-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for quiz title */
+.quiz-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Question section */
+.question-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Options List */
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.options-list li {
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #e9ecef;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.options-list li:hover {
+  background-color: #dee2e6;
+}
+
+/* Highlighting selected answer */
+.selected {
+  background-color: #d4edda;
+  font-weight: bold;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Result Section */
+.result-section {
+  text-align: center;
+}
+
+.result-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Individual Result Item */
+.result-item {
+  margin-bottom: 20px;
+}
+
+.result-item h3 {
+  font-size: 1.2rem;
+}
+
+.result-item p {
+  margin: 5px 0;
+}
+
+/* Correct and Incorrect Answer Indicators */
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+/* Restart Quiz Button */
+.result-section button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.result-section button:hover {
+  background-color: #218838;
+}

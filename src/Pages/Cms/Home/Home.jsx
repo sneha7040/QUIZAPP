@@ -32,7 +32,7 @@ export default function Home() {
           padding: "20px",
 
           borderRadius: "8px",
-          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          // boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           marginBottom: "20px",
         }}
       >

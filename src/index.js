@@ -28,7 +28,7 @@ const RootComponent = () => {
   if (loading) {
     return (
       <div style={{ textAlign: "center", marginTop: "20vh" }}>
-        <ClipLoader size={60} color={"#e325fc"} loading={loading} />
+        <ClipLoader size={60} color={"#e325fc"} loading={loading}  />
         <p>Loading...</p>
       </div>
     );
@@ -43,7 +43,7 @@ const RootComponent = () => {
         </QueryClientProvider>
       ) : (
         <div style={{ textAlign: "center", marginTop: "20vh" }}>
-          <WifiOffIcon sx={{ width: "100px", height: "100px" }} />
+          <WifiOffIcon sx={{ width: "100px", height: "100px",color:"text.primary" }} />
           <p>You're currently offline. Please check your connection.</p>
         </div>
       )}

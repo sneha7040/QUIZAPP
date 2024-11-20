@@ -2,119 +2,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 50vh; */
-  /* background-color: #f8f8f8; */
+  padding: 10px;
+  margin: 10px;
 }
 
 .card {
-  width: 340px;
-  height: 340px;
-  position: relative;
-  overflow: hidden;
+  width: 300px;
+  height: 300px; 
+  background-color: white;
   border-radius: 15px;
-  background-color: #fff;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #6a11cb, #e325fc);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-content {
-  padding: 20px;
-  text-align: center;
-  height: 100%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1;
-  transition: color 0.4s ease, transform 0.4s ease;
+  align-items: center;
 }
 
-.card-content h2 {
-  font-size: 1.5rem;
-  color: #333;
-  transition: color 0.4s ease, transform 0.4s ease;
-}
-
-.card:hover .card-content h2 {
-  color: #fff;
-  transform: scale(1.1);
-}
-
-.card-gif {
+.card img.card-gif {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  height: 70%; 
+  object-fit: cover; 
+  border-radius: 15px 15px 0 0;
 }
 
-.card:hover .card-gif {
-  transform: scale(1.1);
-  opacity: 0.9;
+.card h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #4a148c;
 }
 
-.card:hover .card-content {
-  backdrop-filter: blur(5px);
-  color: #fff;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    width: 250px;
+    height: 250px; 
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
 }
 
-/* Media Queries for Responsiveness */
-
-/* For devices with a screen width of up to 768px (tablets and smaller screens) */
 @media (max-width: 768px) {
   .card {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 210px;
   }
 
-  .card-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .card-container{
-    height: 30vh;
+  .card h2 {
+    font-size: 0.9rem;
   }
 }
 
-/* For devices with a screen width of up to 576px (mobile phones) */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .card {
-    width: 260px;
-    height: 260px;
+    width: 210px;
+    height: 210px;
   }
 
-  .card-content h2 {
-    font-size: 1.2rem;
-  }
-
-  .card-gif {
-    height: 160px;
-  }
-  .card-container{
-    height: 30vh;
+  .card h2 {
+    font-size: 0.8rem;
   }
 }
 
-/* For devices with a screen width of up to 400px (small mobile phones) */
-@media (max-width: 400px) {
+@media (max-width: 360px) {
   .card {
-    width: 230px;
-    height: 230px;
+    width: 140px;
+    height: 170px;
   }
 
-  .card-content h2 {
-    font-size: 1.1rem;
-  }
-
-  .card-gif {
-    height: 140px;
-  }
-  .card-container{
-    height: 35vh;
+  .card h2 {
+    font-size: 0.75rem;
   }
 }

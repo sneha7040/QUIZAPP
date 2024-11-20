@@ -44,6 +44,7 @@ const QuizAppBannerSlider = () => {
         padding: { xs: "10px", md: "20px" },
         borderRadius: "10px",
         backgroundColor: "background.paper",
+        marginTop:"52px"
       }}
     >
       {banners && Array.isArray(banners) ? (
@@ -88,7 +89,7 @@ const QuizAppBannerSlider = () => {
                       size="large"
                       sx={{
                         display: "block",
-                        margin: { xs: "0 auto", md: "0" }, 
+                        margin: { xs: "0 auto", md: "0" },
                         padding: "12px 50px",
                         background: "linear-gradient(135deg, #6a11cb, #e325fc)",
                         boxShadow: "0px 8px 15px rgba(227, 37, 252, 0.4)",
@@ -98,7 +99,8 @@ const QuizAppBannerSlider = () => {
                         textTransform: "uppercase",
                         transition: "all 0.4s ease",
                         "&:hover": {
-                          background: "linear-gradient(135deg, #2575fc, #6a11cb)",
+                          background:
+                            "linear-gradient(135deg, #2575fc, #6a11cb)",
                           boxShadow: "0px 8px 15px rgba(227, 37, 252, 0.7)",
                         },
                       }}
@@ -108,23 +110,31 @@ const QuizAppBannerSlider = () => {
                   </Grid>
 
                   {/* Image Section */}
+                  {/* Image Section */}
                   <Grid item xs={12} md={6}>
                     <div
                       style={{
                         width: "100%",
-                        height: "auto", 
+                        height: "100%", 
                         maxHeight: "500px",
-                        overflow: "hidden", 
+                        overflow: "hidden",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                         borderRadius: "10px",
                       }}
                     >
                       <img
-                        src={banner.image || "https://via.placeholder.com/400x300?text=No+Image"}
+                        src={
+                          banner.image ||
+                          "https://via.placeholder.com/400x300?text=No+Image"
+                        }
                         alt={banner.title}
                         style={{
                           width: "100%",
-                          height: "100%", 
-                          objectFit: "cover", 
+                          height: "auto", 
+                          maxHeight: "100%", 
+                          objectFit: "contain", 
                         }}
                       />
                     </div>

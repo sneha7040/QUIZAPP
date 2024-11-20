@@ -48,7 +48,7 @@ function Header() {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{ background: "linear-gradient(135deg, #6a11cb, #e325fc)" }}
     >
       <Container maxWidth="xl">
